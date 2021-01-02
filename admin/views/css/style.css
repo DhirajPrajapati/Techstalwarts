@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.userbox {
+  height: 300px;
+  position: relative;
+  margin: 20px 20px;
+}
+
+.userbox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  opacity: 1;
+  display: block;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.userbox .overlay-text {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.userbox:hover img {
+  opacity: 0.3;
+}
+
+.userbox:hover .overlay-text {
+  opacity: 1;
+}
+
+.userbox .text {
+  color: #000;
+  font-size: 1.8em;
+  font-weight: bold;
+}
